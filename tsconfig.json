@@ -1,12 +1,6 @@
 {
-  "extends": "@tsconfig/react-native/tsconfig.json",
+  "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "*": ["src/*"],
-      "@components/*": ["src/components/*"],
-      "@screens/*": ["src/screens/*"]
-    },
-    "typeRoots": ["src/types"]
+    "strict": true
   }
 }
