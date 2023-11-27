@@ -1,19 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import MapScreen from './src/MapScreen/MapScreen';
-import LocationPermissionService from './src/services/LocationPermissionService';
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View } from "react-native";
+import MapScreen from "./src/MapScreen/MapScreen";
+import LocationPermissionService from "./src/services/LocationPermissionService";
+import { ThemeProvider } from "./src/theme/ThemeProvider";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-     <MapScreen />
-     <LocationPermissionService />
-    </View>
+   <SafeAreaProvider>
+     <ThemeProvider>
+      <MapScreen />
+      <LocationPermissionService />
+    </ThemeProvider>
+   </SafeAreaProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
