@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Square, StyledPressable } from './MapSearchBar.styles'
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import CustomText from '../../../common/CustomText/CustomText';
+import CustomText from '../common/CustomText/CustomText';
 
 interface MapSearchBarProps {
     onPress: () => void

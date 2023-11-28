@@ -1,26 +1,33 @@
-import React from 'react'
-import { Modal } from 'react-native'
-import { Container } from './DestiniationModal.styles'
-import RoundButton from '../RoundButton/RoundButton';
+import React from "react";
+import { Modal } from "react-native";
+import { StyledFlatlist } from "./DestiniationModal.styles";
+import RoundButton from "../RoundButton/RoundButton";
+import FlatListHeader from "./conponents/FlatListHeader";
 
 interface DestinationModalProps {
-    visible: boolean;
-    closeModal: () => void 
+  visible: boolean;
+  closeModal: () => void;
 }
 
-const DestinationModal = ({visible, closeModal} : DestinationModalProps) => {
+const DestinationModal = ({ visible, closeModal }: DestinationModalProps) => {
+  const handleRoundButtonPress = () => {
+    closeModal();
+  };
 
-    const handleRoundButtonPress = () => {
-        closeModal()
-    }
-    
+  const renderFlatListItem = () => {
+    return null;
+  };
+
   return (
-    <Modal visible={visible} animationType="fade">
-        <Container>
-            <RoundButton icon='arrow-back-outline' onPress={handleRoundButtonPress} />
-        </Container>
+    <Modal onRequestClose={closeModal} visible={visible} animationType="fade">
+      <StyledFlatlist
+        data={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+        renderItem={renderFlatListItem }
+        ListHeaderComponent={FlatListHeader}
+      />
+      <RoundButton icon="arrow-back-outline" onPress={handleRoundButtonPress} />
     </Modal>
-  )
-}
+  );
+};
 
-export default DestinationModal
+export default DestinationModal;

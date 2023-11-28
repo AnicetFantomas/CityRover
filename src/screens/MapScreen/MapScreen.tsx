@@ -2,7 +2,7 @@ import React from "react";
 import { Container, StyledMapView } from "./MapScreen.styles";
 import useMapScreen from "./useMapScreen";
 import RoundButton from "../../components/RoundButton/RoundButton";
-import MapSearchBar from "../../components/RoundButton/MapSearchBar/MapSearchBar";
+import MapSearchBar from "../../components/MapSearchBar/MapSearchBar";
 import DestinationModal from "../../components/DestintaionModal/DestinationModal";
 
 const MapScreen = () => {

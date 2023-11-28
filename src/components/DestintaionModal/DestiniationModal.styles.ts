@@ -1,5 +1,4 @@
 import styled from '@emotion/native';
+import type { FlatList } from 'react-native';
 
-export const Container = styled.View({
-    flex: 1,
-});
+export const StyledFlatlist = styled.FlatList({}) as unknown as typeof FlatList;
