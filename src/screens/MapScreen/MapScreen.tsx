@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, StyledMapView } from "./MapScreen.styles";
 import useMapScreen from "./useMapScreen";
-import RoundButton from "../components/RoundButton/RoundButton";
+import RoundButton from "../../components/RoundButton/RoundButton";
 
 const MapScreen = () => {
   const { operations, models } = useMapScreen();
