@@ -12,10 +12,17 @@ import DestinationInput from "../../DestinationInput/DestinationInput";
 import Spacer from "../../common/Spacer/Spacer";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { scale } from "react-native-size-matters";
+import Divider from "../../common/Divider/Divider";
 
-const FlatListHeader = () => {
+interface FlatListHeaderProps {
+    destinationValue: string;
+  onDestinationTextChange: (text: string) => void;
+}
+
+const FlatListHeader = ({destinationValue, onDestinationTextChange}: FlatListHeaderProps) => {
   const insets = useSafeAreaInsets();
   return (
+   <>
     <Container>
       <Spacer height={insets.top + scale(60)} />
       <HorizontalContainer>
@@ -28,10 +35,13 @@ const FlatListHeader = () => {
         <InputsContainer>
           <DestinationInput placeholder="Your current location" disabled />
           <Spacer height={scale(10)} />
-          <DestinationInput />
+          <DestinationInput  value={destinationValue} onChangeText={onDestinationTextChange} />
         </InputsContainer>
       </HorizontalContainer>
     </Container>
+    <Spacer height={scale(10)} />
+    <Divider />
+   </>
   );
 };
 

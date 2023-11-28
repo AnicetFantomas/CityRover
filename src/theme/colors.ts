@@ -28,6 +28,9 @@ export const colors = {
     destinationModal: {
         decoratorCircle: pallette.lightGrey,
         decoratorSquare: pallette.black   
+    },
+    divider: {
+        backgroundColor: pallette.lightGrey
     }
   },
 };
