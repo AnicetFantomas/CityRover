@@ -16,7 +16,7 @@ const useMapScreen = () => {
   };
 
 const handleMapSearchPress = () => {
-  setModalVisible(!modalVisible);
+  setModalVisible(true);
 } 
 
   useEffect(() => {

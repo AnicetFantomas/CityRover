@@ -3,6 +3,7 @@ import { Container, StyledMapView } from "./MapScreen.styles";
 import useMapScreen from "./useMapScreen";
 import RoundButton from "../../components/RoundButton/RoundButton";
 import MapSearchBar from "../../components/RoundButton/MapSearchBar/MapSearchBar";
+import DestinationModal from "../../components/DestintaionModal/DestinationModal";
 
 const MapScreen = () => {
   const { operations, models } = useMapScreen();
@@ -15,8 +16,9 @@ const MapScreen = () => {
         onUserLocationChange={operations.handleUseLocationChange}
         showsMyLocationButton={false}
       />
-      <RoundButton icon="ios-menu-outline" onPress={() => console.log("menu")}/>
       <MapSearchBar onPress={operations.handleMapSearchPress}/>
+      <RoundButton icon="ios-menu-outline" onPress={() => console.log("menu")}/>
+      <DestinationModal visible={models.modalVisible}/>
     </Container>
   );
 };
