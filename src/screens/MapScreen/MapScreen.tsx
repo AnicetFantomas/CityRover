@@ -16,7 +16,7 @@ const MapScreen = () => {
         showsMyLocationButton={false}
       />
       <RoundButton icon="ios-menu-outline" onPress={() => console.log("menu")}/>
-      <MapSearchBar onPress={() => console.log("search")}/>
+      <MapSearchBar onPress={operations.handleMapSearchPress}/>
     </Container>
   );
 };
