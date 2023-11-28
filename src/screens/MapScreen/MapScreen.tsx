@@ -18,7 +18,7 @@ const MapScreen = () => {
       />
       <MapSearchBar onPress={operations.handleMapSearchPress}/>
       <RoundButton icon="ios-menu-outline" onPress={() => console.log("menu")}/>
-      <DestinationModal visible={models.modalVisible}/>
+      <DestinationModal visible={models.modalVisible} closeModal={operations.handleModalClose}/>
     </Container>
   );
 };

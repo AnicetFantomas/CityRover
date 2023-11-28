@@ -19,6 +19,10 @@ const handleMapSearchPress = () => {
   setModalVisible(true);
 } 
 
+  const handleModalClose = () => {
+    setModalVisible(false);
+  };
+
   useEffect(() => {
     if (userLocation) {
       mapRef.current?.animateToRegion({
@@ -36,7 +40,8 @@ const handleMapSearchPress = () => {
     models: { mapRef, modalVisible},
     operations: {
       handleUseLocationChange,
-      handleMapSearchPress
+      handleMapSearchPress,
+      handleModalClose
     },
   };
 };

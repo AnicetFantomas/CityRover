@@ -5,14 +5,19 @@ import RoundButton from '../RoundButton/RoundButton';
 
 interface DestinationModalProps {
     visible: boolean;
+    closeModal: () => void 
 }
 
-const DestinationModal = ({visible} : DestinationModalProps) => {
+const DestinationModal = ({visible, closeModal} : DestinationModalProps) => {
+
+    const handleRoundButtonPress = () => {
+        closeModal()
+    }
     
   return (
     <Modal visible={visible} animationType="fade">
         <Container>
-            <RoundButton icon='arrow-back-outline' onPress={() => console.log('back')} />
+            <RoundButton icon='arrow-back-outline' onPress={handleRoundButtonPress} />
         </Container>
     </Modal>
   )
