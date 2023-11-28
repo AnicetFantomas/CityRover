@@ -23,6 +23,7 @@ export const StyledPressable = styled.Pressable(({theme}) => {
         alignItems: 'center',
         padding: scale(15),
         ...theme.shadows.primary(theme),
+        flexDirection: 'row',
     }
 })
 
