@@ -1,21 +1,34 @@
-const pallete = {
+const pallette = {
   white: "#fff",
   black: "#000",
   grey: "rgba(34,34,34,0.8)",
+  lightGrey: 'rgba(100,100,100, 0.35)',
+  lighterGrey: 'rgba(100,100,100, 0.1)',
+
 };
 
 export const colors = {
   typography: {
-    body: pallete.grey,
+    body: pallette.grey,
+    textDisabled: pallette.lightGrey,
+    common: pallette.black
   },
   common: {
-    background: pallete.white,
-    shadowDefault: pallete.black,
+    background: pallette.white,
+    shadowDefault: pallette.black,
   },
   components: {
     mapSearchBar: {
-      squareColor: pallete.black,
+      squareColor: pallette.black,
     },
+    destinationInput: {
+        disabledBackground: pallette.lighterGrey,
+        activeBackground: pallette.lightGrey
+    },
+    destinationModal: {
+        decoratorCircle: pallette.lightGrey,
+        decoratorSquare: pallette.black   
+    }
   },
 };
 
